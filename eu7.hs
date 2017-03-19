@@ -10,7 +10,8 @@ divs x = nub $ sqdivs ++ pairs sqdivs
          pairs [] = []; pairs (a:as) = div x a : pairs as
 
 prime :: Int -> Bool
-prime n = null $ divs n \\ [1,n]
+prime n | n < 0     = False
+        | otherwise = null $ divs n \\ [1,n]
 
 main = do
     print $ [x | x <- [1..], prime x] !! 10001
