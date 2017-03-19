@@ -18,4 +18,4 @@ main = do
              a <- [-1000..1000], b <- [-1000..1000]]
    let (a,b,c) = head $ sortBy (flip comp) $ ps
    print (a, b, a*b, length c, c)
-   -- (a, b, solution, number of of primes, primes)
+   -- (a, b, solution, number of primes, primes)
