@@ -1,3 +1,5 @@
+module Eu12 where
+
 import Eu7 (divs, prime)
 
 -- formula from problem 45

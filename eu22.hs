@@ -1,3 +1,5 @@
+module Eu22 where
+
 import Data.List
 import Data.List.Split
 import Data.Char (ord)

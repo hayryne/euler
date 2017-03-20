@@ -1,3 +1,5 @@
+module Eu20 where
+
 import Eu16 (digits)
 
 fac 0 = 1
