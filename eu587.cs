@@ -9,18 +9,18 @@ class Eu587
 
     static void Main()
     {
-        double x = 1, cornerArea = 0, area = 1;
+        double x = DIAMETER, cornerArea = 0, area = DIAMETER;
 
         for (double i = 0; i <= RADIUS; i += PRECISION)
-            cornerArea += (RADIUS-Math.Sqrt(-(i-1)*i)) * PRECISION;
+            cornerArea += (RADIUS-Math.Sqrt(-(i-DIAMETER)*i)) * PRECISION;
 
         while (area/cornerArea > PERCENTAGE)
             for (double i = 0; i <= RADIUS; i += PRECISION)
-                if (Math.Abs(RADIUS-Math.Sqrt(-(i-1)*i)-1/x*i) < PRECISION)
+                if (Math.Abs(RADIUS-Math.Sqrt(-(i-DIAMETER)*i)-DIAMETER/x*i) < PRECISION)
                 {
-                    area = 1/x*(i*i)/2;
+                    area = DIAMETER/x*(i*i)/2;
                     for (double j = i; j <= RADIUS; j += PRECISION)
-                        area += (RADIUS-Math.Sqrt(-(j-1)*j)) * PRECISION;
+                        area += (RADIUS-Math.Sqrt(-(j-DIAMETER)*j)) * PRECISION;
                     x++; break;
                 }
 
