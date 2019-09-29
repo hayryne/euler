@@ -1,4 +1,3 @@
-import Data.List (permutations)
 import Eu7 (prime)
 
 main = do
@@ -12,4 +11,4 @@ rotations n = map (read . rotate s) [1 .. length s]
     where s = show n
 
 rotate :: [a] -> Int -> [a]
-rotate xs n = (drop n xs) ++ (take n xs) 
+rotate xs n = (drop n xs) ++ (take n xs)
